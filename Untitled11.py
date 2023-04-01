@@ -1,232 +1,113 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
-
-
-#задание 1:Калькулятор
-a=int(input())
-b=int(input())
-print(a+b)
-print(a-b)
-print(a/b)
-print(a*b)
-print(a//b)
-
-
 # In[4]:
 
 
-#задание 2
-a=int(input())
-b=int(input())
-c=int(input())
-d=((a+2)/(b+5))**4-0.001*c
-print(d)
+import math
+r=int(input())
+pi=math.pi
+t=2*pi*r
+print(t)
+
+
+# In[5]:
+
+
+import math
+math.e
 
 
 # In[6]:
 
 
-a=int(input())
-if(a>=1 and a<=2):
-    print("зима")
-elif(a>=3 and a<=5):
-    print("весна")
-elif(a>=6 and a<=8):
-    print("лето")
-elif(a>=9 and a<=11):
-    print("осень")
-elif(a==12):
-    print("зима")
-else:
-    print("Ошибка")
+import math
+math.pi
 
 
 # In[7]:
 
 
-a=int(input())
-if a<=0:
-    print("Нет здоровья")
-else:
-    print("Есть здоровья")
+import random
+a=[1,5,62,89,"Зима",9]
+e=random.choice(a)
+print(e)
 
 
-# In[16]:
+# In[8]:
 
 
-a=int(input())
-if   (a == 1):
-    print("Понедельник")
-elif (a == 2):
-    print("Вторник")
-elif (a == 3):
-    print("Среда")
-elif (a == 4):
-    print("Четверг")
-elif (a == 5):
-    print("Пятница")
-elif (a == 6):
-    print("Суббота")
-elif (a == 7):
-    print("Воскресенья")
-else:
-    print("Ошибка")
-      
+import random
+random.randrange(1000)
 
 
-# In[19]:
+# In[9]:
 
 
-a=int(input())
-print(str(a)+ " Киллометров это " + str(a*1000)+ " Метров ")
+import random
+random.random()
 
 
-# In[22]:
+# In[11]:
 
 
-#практическая задача 1
-sample={3,25,1221}
-sample={3,25}
-s=sample-sample
-print(s)
-print(type(s))
+import random
+random.randint(1,100)
 
 
-# In[23]:
+# In[17]:
 
 
-sample=['abc',25,1221]
-print(sample[2])
+import random
+a=[1,5,62,89,"Зима",9]
+random.shuffle(a)
+print(a)
 
 
-# In[25]:
+# In[21]:
 
 
-for i in range(5,10):
-    print(i)
-
-
-# In[27]:
-
-
-for i in range(5,10):
-    print(i)
-
-
-# In[29]:
-
-
-sum=0
-for i in range(0,21):
-    sum=sum+i
-    print(sum)
-
-
-# In[31]:
-
-
-a=[14,14,45,6,57,68,7,6,8,68,6,86,68,6,89,77,857,64]
-for i in a:
-    print(i*2)
-
-
-# In[32]:
-
-
-a=['white','red','black','grey','green']
-for i in a:
-    print("Color: " + i)
-
-
-# In[33]:
-
-
-a=0
-while (a <10):
-    a=a+2
-    print(a)
+import random
+print("Добро пожаловать в розыгрыш призов")
+t=['Саша',"Саша","Саша"]
+print("Победитель розыгрыша", random.choice(t))
 
 
 # In[ ]:
 
 
-d=int(input()) 
-for i in range(0,d + 1):
-    print(i)
-
-
-# In[ ]:
-
-
-d=int(input()) 
-for i in range(0,d + 1):
-    print(i)
-
-
-# In[35]:
-
-
-d=int(input())
-c=int(input())
-for i in range(d,c + 1):
-    print(i)
-
-
-# In[ ]:
-
-
-d=int(input())
-c=int(input())
-if (d<c):
-    for i in range(d,c):
-        print(i)
+import random
+print("добро пожаловать в игру кальмара")
+i=input("Введите имя первого игрока: ")
+t=input("Введите имя второго игрока:  /n")
+w=[1,2,3,4,5,6,7,8,9,10]
+h=[1,2,3,4,5,6,7,8,9,10]
+ScoreOne=0
+scoreTwo=0
+def throwDise():
+    for j in range(5):
+        random.shuffle(w)
+        random.shuffle(h)
+    return w[0] + h[0]
+for j in range(3):
+    result = throwDise()
+    scoreOne += result
+    print("Игрок",i,"выбросил: ",result)
+    print("Сумма очков у игрока",i,":",ScoreOne)
+    z=input("Чтобы сделать следующий бросок,нажмите enter /n")
+    result = throwDise()
+    scoreOne += result
+    print("Игрок",i,"выбросил: ",result)
+    print("Сумма очков у игрока",i,":",ScoreOne)
+    z=input("Чтобы сделать следующий бросок,нажмите enter /n")
+if (i>t):
+    print("Игрок",i,"победил")
+    print(i,"набрал",ScoreOne, "очков")        
+elif(i<t):          
+    print("Игрок",t,"победил")
+    print(t,"набрал",ScoreTwo, "очков")        
 else:
-    for i in range(d,c, - 1):
-        print(i)
-
-
-# In[1]:
-
-
-
-
-
-# In[ ]:
-
-
-d=int(input())
-c=int(input())
-if (d<c):
-    for i in range(d,c):
-        print(i)
-else:
-    for i in range(d,c,-1):
-        print(i)
-
-
-# In[3]:
-
-
-d=int(input())
-c=int(input())
-if (d<c):
-    for i in range(d,c):
-        print(i)
-else:
-    for i in range(d,c,-1):
-        print(i)
-
-
-# In[4]:
-
-
-sum=0
-a=int(input())
-for i in range(0,a+1):
-    sum=sum+i
-    print(sum)
+    print("ничия")
 
 
 # In[ ]:
